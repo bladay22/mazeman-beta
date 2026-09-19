@@ -82,6 +82,7 @@ mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_fos0i")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_cm0pq"), SubResource("Terrain3DTextureAsset_trn2v")])
 
 [node name="Node3D" type="Node3D" unique_id=350341635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.107629195, 0)
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=341637609]
 data_directory = "res://Terrain3d_Data"
@@ -91,6 +92,6 @@ top_level = true
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=109132208 instance=ExtResource("5_3dxm6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69301414, 1.10191, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69373083, 1.0969096, 0.005301133)
 
 [node name="MouseLock" parent="." unique_id=107888954 instance=ExtResource("6_lgr22")]
