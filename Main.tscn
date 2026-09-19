@@ -81,7 +81,20 @@ normal_texture = ExtResource("4_lgr22")
 mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_fos0i")])
 texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_cm0pq"), SubResource("Terrain3DTextureAsset_trn2v")])
 
+[sub_resource type="Environment" id="Environment_s442f"]
+background_mode = 1
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 16.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_e3glj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mhpad"]
+
 [node name="Node3D" type="Node3D" unique_id=350341635]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=679755880]
+transform = Transform3D(1, 0, 0, 0, -0.85477984, 0.5189908, 0, -0.5189908, -0.85477984, 0, 16.315105, 0)
 
 [node name="Terrain3D" type="Terrain3D" parent="." unique_id=341637609]
 data_directory = "res://Terrain3d_Data"
@@ -91,6 +104,18 @@ top_level = true
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=109132208 instance=ExtResource("5_3dxm6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69301414, 1.10191, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8444035, 1.2341574, 0.024855137)
 
 [node name="MouseLock" parent="." unique_id=107888954 instance=ExtResource("6_lgr22")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=418171834]
+environment = SubResource("Environment_s442f")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=631321218]
+transform = Transform3D(33.025, 0, 0, 0, 0.1, 0, 0, 0, 33.025, -1.4740069, 0, 0)
+mesh = SubResource("BoxMesh_e3glj")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="MeshInstance3D" unique_id=875265768]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/RigidBody3D" unique_id=556629502]
+shape = SubResource("BoxShape3D_mhpad")
