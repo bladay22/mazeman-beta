@@ -92,6 +92,7 @@ ambient_light_energy = 16.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_mhpad"]
 
 [node name="Node3D" type="Node3D" unique_id=350341635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.107629195, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=679755880]
 transform = Transform3D(1, 0, 0, 0, -0.85477984, 0.5189908, 0, -0.5189908, -0.85477984, 0, 16.315105, 0)
@@ -104,7 +105,11 @@ top_level = true
 metadata/_edit_lock_ = true
 
 [node name="Player" parent="." unique_id=109132208 instance=ExtResource("5_3dxm6")]
+<<<<<<< HEAD
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8444035, 1.2341574, 0.024855137)
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.69373083, 1.0969096, 0.005301133)
+>>>>>>> 3ba5b6c54e7df9a21b9ec3165225f4a1fc534ad0
 
 [node name="MouseLock" parent="." unique_id=107888954 instance=ExtResource("6_lgr22")]
 
